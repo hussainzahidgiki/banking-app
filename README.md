@@ -1,5 +1,4 @@
 # banking-app
-A command-line banking application written in Java
 The goal was to write a command-line program, in Java, to act as a simple banking application, with bank accounts. Each bank account has a name (the person holding the account), a balance, and a list of transactions. List of features:
 1. The ability to list all bank accounts’ names in the system – there should be at least two in the program when it is first run.
 2. The ability to view an individual bank account with its balance and list of transactions.
