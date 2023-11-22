@@ -5,11 +5,20 @@ import uk.ac.cardiff.bankingapp.transactions.Transaction;
 import java.util.List;
 
 public class BankAccount {
+
+    private Integer Id;
     private String accountHolderName;
     private Integer accountBalance;
     private List<Transaction> transactions;
 
-    public BankAccount(String accountHolderName, Integer accountBalance, List<Transaction> transactions) {
+    //Two constructors ?
+    public BankAccount(Integer Id, String accountHolderName, Integer accountBalance) {
+        this.Id=Id;
+        this.accountHolderName = accountHolderName;
+        this.accountBalance = accountBalance;
+    }
+    public BankAccount(Integer Id, String accountHolderName, Integer accountBalance, List<Transaction> transactions) {
+        this.Id=Id;
         this.accountHolderName = accountHolderName;
         this.accountBalance = accountBalance;
         this.transactions = transactions;
@@ -33,5 +42,17 @@ public class BankAccount {
 
     public List<Transaction> getTransactions() {
         return transactions;
+    }
+
+    public Integer getId() {
+        return Id;
+    }
+
+    public void setTransactions(List<Transaction> transactions) {
+        this.transactions = transactions;
+    }
+
+    public void setId(Integer id) {
+        Id = id;
     }
 }

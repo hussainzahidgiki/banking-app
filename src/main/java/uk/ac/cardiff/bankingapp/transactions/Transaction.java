@@ -6,9 +6,12 @@ public class Transaction {
     private Integer transactionAmount;
     private Date transactionDate;
 
-    public Transaction(Integer transactionAmount, Date transactionDate) {
+    private TransactionType transactionType;
+
+    public Transaction(Integer transactionAmount, Date transactionDate, TransactionType transactionType) {
         this.transactionAmount = transactionAmount;
         this.transactionDate = transactionDate;
+        this.transactionType= transactionType;
     }
 
     @Override
@@ -30,5 +33,13 @@ public class Transaction {
 
     public void setTransactionDate(Date transactionDate) {
         this.transactionDate = transactionDate;
+    }
+
+    public TransactionType getTransactionType() {
+        return transactionType;
+    }
+
+    public void setTransactionType(TransactionType transactionType) {
+        this.transactionType = transactionType;
     }
 }
