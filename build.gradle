@@ -3,7 +3,6 @@ plugins {
 }
 
 group 'org.example'
-version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
@@ -17,6 +16,9 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+// Set the archives base name for the JAR file
+archivesBaseName = '23093777'
 
 jar {
     manifest {

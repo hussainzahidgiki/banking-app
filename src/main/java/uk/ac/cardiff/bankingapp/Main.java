@@ -124,7 +124,7 @@ public class Main {
                     BankAccount newBankAccount = new BankAccount(bankAccounts.get(bankAccounts.size() - 1).getId() + 1, newAccountHolderName, newAccountBalance);
                     bankAccounts.add(newBankAccount);
 
-                    System.out.print("Bank account created successfully!");
+                    System.out.println("Bank account created successfully!");
                     break;
                 }
 
