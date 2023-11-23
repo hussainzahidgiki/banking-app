@@ -8,17 +8,22 @@ public class BankAccount {
 
     private Integer Id;
     private String accountHolderName;
-    private Integer accountBalance;
+    private Float accountBalance; //Not expecting amount to be too large so opted for Float
     private List<Transaction> transactions;
 
-    //Two constructors ?
-    public BankAccount(Integer Id, String accountHolderName, Integer accountBalance) {
-        this.Id=Id;
+    /*
+
+     * The reason we have two constructors here is to allow us to initialize bank accounts with
+     * and without transactions.
+     */
+    public BankAccount(Integer Id, String accountHolderName, Float accountBalance) {
+        this.Id = Id;
         this.accountHolderName = accountHolderName;
         this.accountBalance = accountBalance;
     }
-    public BankAccount(Integer Id, String accountHolderName, Integer accountBalance, List<Transaction> transactions) {
-        this.Id=Id;
+
+    public BankAccount(Integer Id, String accountHolderName, Float accountBalance, List<Transaction> transactions) {
+        this.Id = Id;
         this.accountHolderName = accountHolderName;
         this.accountBalance = accountBalance;
         this.transactions = transactions;
@@ -32,11 +37,11 @@ public class BankAccount {
         this.accountHolderName = accountHolderName;
     }
 
-    public Integer getAccountBalance() {
+    public Float getAccountBalance() {
         return accountBalance;
     }
 
-    public void setAccountBalance(Integer accountBalance) {
+    public void setAccountBalance(Float accountBalance) {
         this.accountBalance = accountBalance;
     }
 
